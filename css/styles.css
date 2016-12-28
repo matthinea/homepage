@@ -3,7 +3,7 @@ body {
   background-color: grey; }
 
 #hero-scroll-area {
-  height: 300vh; }
+  height: auto; }
 
 #pt {
   width: 100vw;

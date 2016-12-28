@@ -20,19 +20,5 @@ for (let ii = 1; ii <= 10; ii++) {
 }
 
 let wp = new Waypoint({
-  element: scrollArea,
-  handler: function(direction) {
-    console.log($(window).scrollTop());
-    $('#mouse').css({
-      'position': 'fixed',
-      'transform': 'translateY(' + $(window).scrollTop() + 'px)'
-    });
-    $('.mouse__container').css({
-      // 'transform': 'translateY(' + $(window).scrollTop() * -1 + 'px)'
-    })
-    setTimeout(function(){
-      console.log($('.mouse__container').css("transition-duration"));
-    },500);
-  }, 
-  offset: -400
+  element: scrollArea
 })
