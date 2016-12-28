@@ -14,6 +14,6 @@ for (let ii = 1; ii <= 10; ii++) {
       });
       console.log("down");
     },
-    offset: (Waypoint.viewportHeight() / 25 * (ii + 1) + 300) * -1
+    offset: (Waypoint.viewportHeight() / 25 * (ii + 1) + 200) * -1
   })
 }

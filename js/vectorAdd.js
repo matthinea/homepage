@@ -11,9 +11,9 @@ var form = new Form( space );
 //// 2. Create Elements
 var center = new Vector(space.size.$divide(2));
 var mouse = new Vector( space.size.x/2, space.size.y/1.35);
-var vec1 = new Vector( -space.size.x /3, -space.size.y  /3); // relative vectors - used only as dist from center
-var vec2 = new Vector( space.size.x /3, -space.size.y /3 ); // relative vectors - used only as dist from center
-
+// relative vectors - used only as dist from center
+var vec1 = new Vector( -space.size.x /3, -space.size.y  /3); 
+var vec2 = new Vector( space.size.x /3, -space.size.y /3 ); 
 var Vectors = { 
     "vec1": vec1.$add(center), 
     "vec2": vec2.$add(center) 
@@ -27,10 +27,9 @@ var time = numTweens * 2;
 
 for( let i = 0; i < numTweens; i++) {
     let x = Math.random() * space.size.x / 2;
-    x *= Math.floor(Math.random()*2) == 1 ? 1 : -1;
+    x *= Math.floor(Math.random()*2) == 1 ? 1 : -1; // 50% chance of negative val
     let y = Math.random() * space.size.y;    
-    let thisTween = {x, y};
-    mouseTweenVals.push(thisTween);
+    mouseTweenVals.push({x, y});
 }
 TweenMax.to("#mouse", time, {
     bezier: {

@@ -13,7 +13,7 @@ body {
   transform: scale(1.025) translateX(-1%); }
 
 #mouse {
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 0; }
 
