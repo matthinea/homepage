@@ -1,5 +1,6 @@
 body {
-  margin: 0; }
+  margin: 0;
+  background-color: grey; }
 
 #hero-scroll-area {
   height: 300vh; }
@@ -9,12 +10,14 @@ body {
   height: 100vh;
   filter: blur(1px);
   position: fixed;
-  top: 0;
-  transform: scale(1.025) translateX(-1%); }
+  top: 0; }
 
 #mouse {
   position: fixed;
   left: 50%;
   top: 0; }
+
+.mouse__container {
+  transition: transform; }
 
 /*# sourceMappingURL=styles.css.map */
