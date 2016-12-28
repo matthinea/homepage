@@ -36,8 +36,7 @@ TweenMax.to("#mouse", time, {
     bezier: {
         type: "soft", 
         values: mouseTweenVals,
-        autoRotate: true,
-        curviness: 8
+        autoRotate: true
     },
     ease: Power0.easeNone, repeat: -1, yoyo: true
 })

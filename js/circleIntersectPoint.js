@@ -24,7 +24,7 @@ for (var i=0; i<500; i++) {
 
 var lastTop = 0;
 $(window).scroll(function() {
-  thisTop = $(this).scrollTop();
+  let thisTop = $(this).scrollTop();
   if(thisTop > lastTop) {
     let newY = mouse.y + 10
     mouse.set(mouse.x, newY);

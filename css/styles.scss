@@ -1,10 +1,5 @@
-html {
-  background-color: green;
-}
-
 body {
   margin: 0;
-  //filter: blur(1px) contrast(200%);
 }
 
 #placeholder {
@@ -16,6 +11,8 @@ body {
   width: 100vw; 
   height: 100vh;
   filter: blur(1px);
+  position: fixed;
+  top: 0;
 }
 
 #mouse {
