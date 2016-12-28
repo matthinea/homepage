@@ -1,0 +1,20 @@
+html {
+  background-color: green; }
+
+body {
+  margin: 0; }
+
+#placeholder {
+  height: 1000px; }
+
+#pt {
+  width: 100vw;
+  height: 100vh;
+  filter: blur(1px); }
+
+#mouse {
+  position: absolute;
+  left: 50%;
+  top: 0; }
+
+/*# sourceMappingURL=styles.css.map */

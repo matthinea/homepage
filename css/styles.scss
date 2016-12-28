@@ -1,0 +1,25 @@
+html {
+  background-color: green;
+}
+
+body {
+  margin: 0;
+  //filter: blur(1px) contrast(200%);
+}
+
+#placeholder {
+  height: 1000px;
+}
+
+
+#pt {
+  width: 100vw; 
+  height: 100vh;
+  filter: blur(1px);
+}
+
+#mouse {
+  position: absolute;
+  left: 50%;
+  top: 0;
+}
