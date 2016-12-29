@@ -1,23 +1,64 @@
+@font-face {
+  font-family: 'eurosans_proregular';
+  src: url("fonts/eurosanspro-reg-webfont.eot");
+  src: url("fonts/eurosanspro-reg-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/eurosanspro-reg-webfont.woff2") format("woff2"), url("fonts/eurosanspro-reg-webfont.woff") format("woff"), url("fonts/eurosanspro-reg-webfont.ttf") format("truetype"), url("fonts/eurosanspro-reg-webfont.svg#eurosans_proregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'sanchez_regularregular';
+  src: url("fonts/sanchezregular-webfont.eot");
+  src: url("fonts/sanchezregular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/sanchezregular-webfont.woff2") format("woff2"), url("fonts/sanchezregular-webfont.woff") format("woff"), url("fonts/sanchezregular-webfont.ttf") format("truetype"), url("fonts/sanchezregular-webfont.svg#sanchez_regularregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'queulat_cndregular';
+  src: url("fonts/queulatcnd-regular-webfont.woff2") format("woff2"), url("fonts/queulatcnd-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'casperregular';
+  src: url("fonts/casper-webfont.eot");
+  src: url("fonts/casper-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/casper-webfont.woff2") format("woff2"), url("fonts/casper-webfont.woff") format("woff"), url("fonts/casper-webfont.ttf") format("truetype"), url("fonts/casper-webfont.svg#casperregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 body {
   margin: 0;
   background-color: grey; }
-
-#hero-scroll-area {
-  height: auto; }
 
 #pt {
   width: 100vw;
   height: 100vh;
   filter: blur(1px);
   position: fixed;
-  top: 0; }
+  top: 0;
+  z-index: -1; }
 
 #mouse {
   position: fixed;
   left: 50%;
   top: 0; }
 
-.mouse__container {
-  transition: transform; }
+#hero-scroll-area {
+  height: 100vh; }
+
+.intro {
+  text-align: center;
+  color: white;
+  height: 100vh;
+  z-index: 100;
+  font-family: 'casperregular';
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-bottom: 500px; }
+  .intro__brand, .intro__description {
+    letter-spacing: 0.06em;
+    opacity: 0;
+    display: inline-block;
+    position: relative; }
+  .intro__icons {
+    opacity: 0; }
+  .intro__icons__description {
+    display: block; }
 
 /*# sourceMappingURL=styles.css.map */

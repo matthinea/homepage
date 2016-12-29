@@ -1,12 +1,9 @@
+@import 'fonts';
+
 body {
   margin: 0;
   background-color: grey;
 }
-
-#hero-scroll-area {
-  height: auto;
-}
-
 
 #pt {
   width: 100vw; 
@@ -14,6 +11,7 @@ body {
   filter: blur(1px);
   position: fixed;
   top: 0;
+  z-index: -1;
 }
 
 #mouse {
@@ -23,6 +21,34 @@ body {
   // transition: transform 2s;
 }
 
-.mouse__container {
-  transition: transform;
+#hero-scroll-area {
+  height: 100vh;
+}
+
+
+.intro {
+  text-align: center;
+  color: white;height: 100vh;
+  z-index: 100;
+  font-family: 'casperregular';
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-bottom: 500px;
+  &__brand, &__description {
+    letter-spacing: 0.06em;
+    opacity: 0;
+    display: inline-block;
+    position: relative;
+  }
+
+  &__brand {
+
+  }
+  &__icons {
+    opacity: 0;
+  }
+  &__icons__description {
+    display: block;
+  }
 }

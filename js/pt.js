@@ -517,15 +517,18 @@ Space = (function() {
       return;
     }
     this._timeDiff = time - this._timePrev;
-    try {
-      this._playItems(time);
-    } catch (_error) {
-      err = _error;
-      cancelAnimationFrame(this._animID);
-      console.error(err.stack);
-      throw err;
+    // hacky way to effectively reduce framerate
+    if(this._timeDiff > 20) {
+      try {
+        this._playItems(time);
+      } catch (_error) {
+        err = _error;
+        cancelAnimationFrame(this._animID);
+        console.error(err.stack);
+        throw err;
+      }
+      this._timePrev = time;
     }
-    this._timePrev = time;
     return this;
   };
 
