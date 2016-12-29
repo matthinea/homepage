@@ -48,17 +48,49 @@ body {
   z-index: 100;
   font-family: 'casperregular';
   width: 100%;
-  max-width: 900px;
+  max-width: 700px;
   margin: 0 auto;
   margin-bottom: 500px; }
   .intro__brand, .intro__description {
-    letter-spacing: 0.06em;
     opacity: 0;
+    margin-right: 20px;
+    letter-spacing: 0.06em;
     display: inline-block;
-    position: relative; }
-  .intro__icons {
+    position: relative;
+    transition: opacity 1s ease, transform 1s ease; }
+    .intro--brand-showing .intro__brand, .intro--brand-showing .intro__description {
+      opacity: 1; }
+  .intro__brand {
+    transform: translateY(100vh); }
+    .intro--brand-showing .intro__brand {
+      transform: none; }
+  .intro__description {
+    transform: translateY(-100vh); }
+    .intro--brand-showing .intro__description {
+      transform: translateY(-3vh); }
+  .intro a {
+    text-decoration: none;
+    width: 100%;
     opacity: 0; }
-  .intro__icons__description {
+  .intro .fa {
+    margin-bottom: 30px;
+    color: #A1A1A1;
+    width: 15%; }
+  .intro svg {
+    height: 42px;
+    width: 51%; }
+    .intro svg rect {
+      fill: #A1A1A1 !important; }
+    .intro svg path {
+      fill: grey !important; }
+  .intro__icons {
+    margin-top: 100px; }
+  .intro__icons__text {
+    opacity: 0;
+    color: #c7c7c7;
+    transition: opacity 1s .5s ease;
     display: block; }
+    .intro__icons__text.showing {
+      opacity: 1; }
 
 /*# sourceMappingURL=styles.css.map */

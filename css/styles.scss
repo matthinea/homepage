@@ -1,5 +1,7 @@
 @import 'fonts';
 
+$text-grey: #A1A1A1;
+
 body {
   margin: 0;
   background-color: grey;
@@ -32,23 +34,64 @@ body {
   z-index: 100;
   font-family: 'casperregular';
   width: 100%;
-  max-width: 900px;
+  max-width: 700px;
   margin: 0 auto;
   margin-bottom: 500px;
   &__brand, &__description {
-    letter-spacing: 0.06em;
     opacity: 0;
+    margin-right: 20px;
+    letter-spacing: 0.06em;
     display: inline-block;
     position: relative;
+    transition: opacity 1s ease, transform 1s ease;
+    .intro--brand-showing & {
+      opacity: 1;
+    }
   }
 
   &__brand {
-
+    transform: translateY(100vh);
+    .intro--brand-showing & {
+      transform: none;
+    }
   }
-  &__icons {
+  &__description {
+    transform: translateY(-100vh);
+    .intro--brand-showing & {
+      transform: translateY(-3vh);
+    }
+  }
+
+  a {
+    text-decoration: none;
+    width: 100%;
     opacity: 0;
   }
-  &__icons__description {
+  .fa {
+    margin-bottom: 30px;
+    color: $text-grey;
+    width: 15%;
+  }
+  svg {
+    height: 42px;
+    width: 51%;
+    rect {
+      fill: $text-grey !important;
+    }
+    path {
+      fill: grey !important;
+    }
+  }
+  &__icons {
+    margin-top: 100px;
+  }
+  &__icons__text {
+    opacity: 0;
+    color: lighten($text-grey, 15);
+    transition: opacity 1s .5s ease;
     display: block;
+    &.showing {
+      opacity: 1;
+    }
   }
 }
