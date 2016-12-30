@@ -1,0 +1,25 @@
+
+
+.about {
+  @extend %signika_negativelight;
+  letter-spacing: 0.06em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 60vh;
+  &-wrapper {
+    text-align: center;
+    margin: 0 auto;
+    width: 75%;
+    max-width: $max-width - 100px;
+    color: white;
+  }
+  p {
+    margin: 60px auto;
+    opacity: 0;
+  }
+  a {
+    text-decoration: none;
+    color: $link-blue;
+  }
+}

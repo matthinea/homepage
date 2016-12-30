@@ -34,7 +34,6 @@ let titleWp = new Waypoint({
 })
 
 let $iconLinks = $('.intro__icons-wrapper a');
-console.log($iconLinks);
 let introWp = new Waypoint({
   element: $intro, 
   handler: function(direction) {
@@ -44,4 +43,28 @@ let introWp = new Waypoint({
     $iconsText.addClass('showing');
   },
   offset: $intro.height() / 2 - 200
+})
+
+let $about = $('.about-wrapper');
+let $aboutText = $('.about-wrapper p');
+let aboutWp = new Waypoint({ 
+  element: $about,
+  handler: function(direction) {
+    TweenMax.staggerTo($aboutText, 1.5, {
+      opacity: 1,
+    }, 0.2);
+  }, 
+  offset: $about.height() / 2 + 100
+})
+
+let $cta = $('.cta');
+let $ctaText = $('.cta-wrapper').children();
+let ctaWp = new Waypoint({ 
+  element: $cta,
+  handler: function(direction) {
+    TweenMax.staggerTo($ctaText, 1.5, {
+      opacity: 1,
+    }, 0.2);
+  }, 
+  // offset: $cta.height() / 2 + 100
 })

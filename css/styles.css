@@ -5,12 +5,6 @@
   font-weight: normal;
   font-style: normal; }
 @font-face {
-  font-family: 'sanchez_regularregular';
-  src: url("fonts/sanchezregular-webfont.eot");
-  src: url("fonts/sanchezregular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/sanchezregular-webfont.woff2") format("woff2"), url("fonts/sanchezregular-webfont.woff") format("woff"), url("fonts/sanchezregular-webfont.ttf") format("truetype"), url("fonts/sanchezregular-webfont.svg#sanchez_regularregular") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-@font-face {
   font-family: 'queulat_cndregular';
   src: url("fonts/queulatcnd-regular-webfont.woff2") format("woff2"), url("fonts/queulatcnd-regular-webfont.woff") format("woff");
   font-weight: normal;
@@ -19,6 +13,51 @@
   font-family: 'casperregular';
   src: url("fonts/casper-webfont.eot");
   src: url("fonts/casper-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/casper-webfont.woff2") format("woff2"), url("fonts/casper-webfont.woff") format("woff"), url("fonts/casper-webfont.ttf") format("truetype"), url("fonts/casper-webfont.svg#casperregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+.intro__icons__text {
+  font-family: 'casperregular';
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'tikal_sans_mediummedium';
+  src: url("fonts/tikalsans-medium-webfont.eot");
+  src: url("fonts/tikalsans-medium-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/tikalsans-medium-webfont.woff2") format("woff2"), url("fonts/tikalsans-medium-webfont.woff") format("woff"), url("fonts/tikalsans-medium-webfont.ttf") format("truetype"), url("fonts/tikalsans-medium-webfont.svg#tikal_sans_mediummedium") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'adria_groteskregular';
+  src: url("fonts/adriagrotesk-regular-webfont.eot");
+  src: url("fonts/adriagrotesk-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/adriagrotesk-regular-webfont.woff2") format("woff2"), url("fonts/adriagrotesk-regular-webfont.woff") format("woff"), url("fonts/adriagrotesk-regular-webfont.ttf") format("truetype"), url("fonts/adriagrotesk-regular-webfont.svg#adria_groteskregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+.intro {
+  font-family: 'adria_groteskregular';
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'signika_negativelight';
+  src: url("fonts/signikanegativelight-webfont.eot");
+  src: url("fonts/signikanegativelight-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/signikanegativelight-webfont.woff2") format("woff2"), url("fonts/signikanegativelight-webfont.woff") format("woff"), url("fonts/signikanegativelight-webfont.ttf") format("truetype"), url("fonts/signikanegativelight-webfont.svg#signika_negativelight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+.intro__description, .about, .cta {
+  font-family: 'signika_negativelight';
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'tikal_sans_mediumMdIt';
+  src: url("fonts/tikalsans-mediumitalic-webfont.eot");
+  src: url("fonts/tikalsans-mediumitalic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/tikalsans-mediumitalic-webfont.woff2") format("woff2"), url("fonts/tikalsans-mediumitalic-webfont.woff") format("woff"), url("fonts/tikalsans-mediumitalic-webfont.ttf") format("truetype"), url("fonts/tikalsans-mediumitalic-webfont.svg#tikal_sans_mediumMdIt") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'dual300';
+  src: url("fonts/dual-300-webfont.eot");
+  src: url("fonts/dual-300-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/dual-300-webfont.woff2") format("woff2"), url("fonts/dual-300-webfont.woff") format("woff"), url("fonts/dual-300-webfont.ttf") format("truetype"), url("fonts/dual-300-webfont.svg#dual300") format("svg");
   font-weight: normal;
   font-style: normal; }
 body {
@@ -42,55 +81,103 @@ body {
   height: 100vh; }
 
 .intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
   color: white;
-  height: 100vh;
+  height: 60vh;
   z-index: 100;
-  font-family: 'casperregular';
   width: 100%;
   max-width: 700px;
-  margin: 0 auto;
-  margin-bottom: 500px; }
+  margin: 0 auto; }
   .intro__brand, .intro__description {
     opacity: 0;
     margin-right: 20px;
     letter-spacing: 0.06em;
-    display: inline-block;
+    display: block;
     position: relative;
     transition: opacity 1s ease, transform 1s ease; }
     .intro--brand-showing .intro__brand, .intro--brand-showing .intro__description {
       opacity: 1; }
   .intro__brand {
-    transform: translateY(100vh); }
+    transform: translateY(-100vh); }
     .intro--brand-showing .intro__brand {
       transform: none; }
   .intro__description {
-    transform: translateY(-100vh); }
+    transform: translateY(100vh); }
     .intro--brand-showing .intro__description {
-      transform: translateY(-3vh); }
+      transform: none; }
   .intro a {
     text-decoration: none;
     width: 100%;
     opacity: 0; }
   .intro .fa {
     margin-bottom: 30px;
-    color: #A1A1A1;
+    color: #e6e6e6;
     width: 15%; }
   .intro svg {
     height: 42px;
     width: 51%; }
     .intro svg rect {
-      fill: #A1A1A1 !important; }
+      fill: #e6e6e6 !important; }
     .intro svg path {
       fill: grey !important; }
   .intro__icons {
     margin-top: 100px; }
   .intro__icons__text {
     opacity: 0;
-    color: #c7c7c7;
+    letter-spacing: 0.053m;
+    color: white;
     transition: opacity 1s .5s ease;
     display: block; }
     .intro__icons__text.showing {
       opacity: 1; }
+
+.about {
+  letter-spacing: 0.06em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 60vh; }
+  .about-wrapper {
+    text-align: center;
+    margin: 0 auto;
+    width: 75%;
+    max-width: 600px;
+    color: white; }
+  .about p {
+    margin: 60px auto;
+    opacity: 0; }
+  .about a {
+    text-decoration: none;
+    color: #98c0e4; }
+
+.cta {
+  letter-spacing: 0.06em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh; }
+  .cta-wrapper {
+    text-align: center;
+    margin: 0 auto;
+    width: 75%;
+    max-width: 600px;
+    color: white; }
+  .cta p, .cta a {
+    text-decoration: none;
+    color: inherit;
+    padding: 10px 0;
+    opacity: 0; }
+  .cta__button {
+    display: inline-block;
+    background-color: #98c0e4;
+    max-width: 150px;
+    width: 40%;
+    border: 2px solid white;
+    border-radius: 4px; }
+    .cta__button:not(:last-child) {
+      margin-right: 40px; }
 
 /*# sourceMappingURL=styles.css.map */

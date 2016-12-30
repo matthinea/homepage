@@ -1,0 +1,19 @@
+#pt {
+  width: 100vw; 
+  height: 100vh;
+  filter: blur(1px);
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+
+#mouse {
+  position: fixed;
+  left: 50%;
+  top: 0;
+  // transition: transform 2s;
+}
+
+#hero-scroll-area {
+  height: 100vh;
+}
