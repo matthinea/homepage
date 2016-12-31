@@ -4,6 +4,13 @@ $text-grey: darken(white, 10);
 $link-blue: #98c0e4;
 $max-width: 700px;
 
+%vertical-center-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
 body {
   margin: 0;
   background-color: grey;
@@ -12,5 +19,6 @@ body {
 
 @import 'hero';
 @import 'intro';
+@import 'profile-icons';
 @import 'about';
 @import 'cta';

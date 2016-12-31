@@ -1,9 +1,7 @@
 .cta {
+  @extend %vertical-center-flex;
   @extend %signika_negativelight;
   letter-spacing: 0.06em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   height: 100vh;
   &-wrapper {
     text-align: center;
@@ -22,8 +20,8 @@
   &__button {
     display: inline-block;
     background-color: $link-blue;
-    max-width: 150px;
-    width: 40%;
+    max-width: 200px;
+    width: 50%;
     border: 2px solid white;
     border-radius: 4px;
     &:not(:last-child) {

@@ -18,6 +18,12 @@ for (let ii = 1; ii <= 12; ii++) {
   })
 }
 
+
+
+
+
+
+
 let $iconsText = $('.intro__icons__text');
 let $intro = $('.intro');
 let slideTime = 1;
@@ -30,8 +36,11 @@ let titleWp = new Waypoint({
     }
     introPlaced = true;
   },
-  offset: $intro.height() / 2 + 100
+  offset: 200
 })
+
+
+
 
 let $iconLinks = $('.intro__icons-wrapper a');
 let introWp = new Waypoint({
@@ -42,8 +51,15 @@ let introWp = new Waypoint({
     }, 0.1);
     $iconsText.addClass('showing');
   },
-  offset: $intro.height() / 2 - 200
+  offset: 50
 })
+
+
+
+
+
+
+
 
 let $about = $('.about-wrapper');
 let $aboutText = $('.about-wrapper p');
@@ -57,6 +73,11 @@ let aboutWp = new Waypoint({
   offset: $about.height() / 2 + 100
 })
 
+
+
+
+
+
 let $cta = $('.cta');
 let $ctaText = $('.cta-wrapper').children();
 let ctaWp = new Waypoint({ 
@@ -66,5 +87,5 @@ let ctaWp = new Waypoint({
       opacity: 1,
     }, 0.2);
   }, 
-  // offset: $cta.height() / 2 + 100
+  offset: 50
 })

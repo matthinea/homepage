@@ -1,15 +1,11 @@
 
 .intro {
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  // @extend %queulat;
+  @extend %vertical-center-flex;
   @extend %adria_groteskregular;
   text-align: center;
 
   color: white;
-  height: 60vh;
+  height: 100vh;
   z-index: 100;
   width: 100%;
   max-width: $max-width;
@@ -17,7 +13,7 @@
 
   &__brand, &__description {
     opacity: 0;
-    margin-right: 20px;
+    // margin-right: 20px;
     letter-spacing: 0.06em;
     display: block;
     position: relative;
@@ -41,38 +37,46 @@
     }
   }
 
-  a {
-    text-decoration: none;
-    width: 100%;
-    opacity: 0;
-  }
-  .fa {
-    margin-bottom: 30px;
-    color: $text-grey;
-    width: 15%;
-  }
-  svg {
-    height: 42px;
-    width: 51%;
-    rect {
-      fill: $text-grey !important;
-    }
-    path {
-      fill: grey !important;
-    }
-  }
-  &__icons {
+  &__icons__links {
     margin-top: 100px;
+    text-align: center;
+    a {
+      text-decoration: none;
+      display: inline-block;
+      opacity: 0;
+      width: 15%;
+    }
+    .fa {
+      margin-bottom: 30px;
+      color: $text-grey;
+      max-width: 150px;
+      &:not(:last-child) {
+        width: 15%;
+      }
+    }
+    svg {
+      height: 42px;
+      width: 51%;
+      rect {
+        fill: $text-grey !important;
+      }
+      path {
+        fill: grey !important;
+      }
+    }
   }
+
   &__icons__text {
     opacity: 0;
+    font-size: 14px;
+    letter-spacing: 0.08em;
     @extend %casper-regular;
     letter-spacing: 0.053m;
     color: lighten($text-grey, 15);
     transition: opacity 1s .5s ease;
     display: block;
     &.showing {
-      opacity: 1;
+      opacity: 0.8;
     }
   }
 }
