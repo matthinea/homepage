@@ -19,13 +19,15 @@
 
   &__button {
     display: inline-block;
-    background-color: $link-blue;
+    background-color: darken($link-blue, 10);
     max-width: 200px;
     width: 50%;
-    border: 2px solid white;
     border-radius: 4px;
     &:not(:last-child) {
       margin-right: 40px;
+    }
+    &:hover {
+      background-color: darken($link-blue, 20);
     }
   }
 }

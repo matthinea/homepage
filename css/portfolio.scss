@@ -1,0 +1,8 @@
+.portfolio {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  &__project {
+    @extend %vertical-center-flex;
+  }
+}

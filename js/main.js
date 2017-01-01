@@ -6,19 +6,19 @@ for (let ii = 1; ii <= 12; ii++) {
   let wp = new Waypoint({
     element: scrollArea,
     handler: function(direction) {
-      $pt.css({
-        'filter'         : 'blur(' + ii + 'px)',
-        '-webkit-filter' : 'blur(' + ii + 'px)',
-        '-moz-filter'    : 'blur(' + ii + 'px)',
-        '-o-filter'      : 'blur(' + ii + 'px)',
-        '-ms-filter'     : 'blur(' + ii + 'px)'
-      });
+      // $pt.css({
+      //   'filter'         : 'blur(' + ii + 'px)',
+      //   '-webkit-filter' : 'blur(' + ii + 'px)',
+      //   '-moz-filter'    : 'blur(' + ii + 'px)',
+      //   '-o-filter'      : 'blur(' + ii + 'px)',
+      //   '-ms-filter'     : 'blur(' + ii + 'px)'
+      // });
+      let filter = 'filter-' + ii;
+      $pt.addClass(filter);
     },
     offset: (Waypoint.viewportHeight() / 25 * (ii + 1) + 100) * -1
   })
 }
-
-
 
 
 
