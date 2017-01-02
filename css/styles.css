@@ -32,7 +32,7 @@
   src: url("fonts/adriagrotesk-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/adriagrotesk-regular-webfont.woff2") format("woff2"), url("fonts/adriagrotesk-regular-webfont.woff") format("woff"), url("fonts/adriagrotesk-regular-webfont.ttf") format("truetype"), url("fonts/adriagrotesk-regular-webfont.svg#adria_groteskregular") format("svg");
   font-weight: normal;
   font-style: normal; }
-.intro {
+.intro, .portfolio h4, .portfolio h3 {
   font-family: 'adria_groteskregular';
   font-weight: normal;
   font-style: normal; }
@@ -43,7 +43,7 @@
   src: url("fonts/signikanegativelight-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/signikanegativelight-webfont.woff2") format("woff2"), url("fonts/signikanegativelight-webfont.woff") format("woff"), url("fonts/signikanegativelight-webfont.ttf") format("truetype"), url("fonts/signikanegativelight-webfont.svg#signika_negativelight") format("svg");
   font-weight: normal;
   font-style: normal; }
-.intro__description, .about, .cta {
+.intro__description, .about, .cta, .portfolio__project {
   font-family: 'signika_negativelight';
   font-weight: normal;
   font-style: normal; }
@@ -60,14 +60,17 @@
   src: url("fonts/dual-300-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/dual-300-webfont.woff2") format("woff2"), url("fonts/dual-300-webfont.woff") format("woff"), url("fonts/dual-300-webfont.ttf") format("truetype"), url("fonts/dual-300-webfont.svg#dual300") format("svg");
   font-weight: normal;
   font-style: normal; }
-.intro, .about, .cta, .portfolio__project {
+.intro, .about, .cta, .portfolio__project, .games {
   display: flex;
   flex-direction: column;
   justify-content: center; }
 
 body {
-  margin: 0;
-  background-color: grey; }
+  margin: 0; }
+  body.portfolio {
+    background-color: #fff; }
+  body.index {
+    background-color: grey; }
 
 #pt {
   width: 100vw;
@@ -204,20 +207,89 @@ body {
     color: inherit;
     padding: 10px 0;
     opacity: 0; }
-  .cta__button {
+  .cta__button, .portfolio__project a:not([href^="img/"]) {
     display: inline-block;
     background-color: #70a7d9;
     max-width: 200px;
     width: 50%;
     border-radius: 4px; }
-    .cta__button:not(:last-child) {
+    .cta__button:not(:last-child), .portfolio__project a:not(:last-child):not([href^="img/"]) {
       margin-right: 40px; }
-    .cta__button:hover {
+    .cta__button:hover, .portfolio__project a:hover:not([href^="img/"]) {
       background-color: #478fcf; }
 
+body#portfolio {
+  height: 100vh; }
+
 .portfolio {
-  width: 90%;
-  max-width: 800px;
-  margin: 0 auto; }
+  width: 92%;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 80vh; }
+  .portfolio h4, .portfolio h3 {
+    display: inline-block;
+    font-size: 26px; }
+  .portfolio__project ul {
+    margin-bottom: 50px; }
+  .portfolio__project a:not([href^="img/"]) {
+    padding: 5px 10px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    max-width: 100px; }
+  .portfolio__project__links {
+    width: 300px;
+    display: inline-block;
+    float: right;
+    margin-top: 35px; }
+  .portfolio img {
+    width: 100%;
+    max-width: 764px;
+    margin: 0 auto; }
+
+.games h3, .games h4 {
+  display: block; }
+.games__sample {
+  width: 32%;
+  display: inline-block;
+  text-align: center; }
+  .games__sample h3, .games__sample h4 {
+    margin: 0 auto;
+    font-size: 16px; }
+  .games__sample img {
+    width: 100%; }
+  .games__sample a {
+    margin: 10px auto !important;
+    font-size: 13px;
+    width: 30% !important;
+    padding: 5px 0px !important; }
+
+.slick-slide {
+  margin: 0 40px; }
+.slick-dots {
+  position: static !important; }
+.slick-next, .slick-prev {
+  width: 50px;
+  height: 50px; }
+  .slick-next__arrow, .slick-prev__arrow {
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    height: 15px;
+    width: 15px; }
+.slick-next {
+  right: 0; }
+  .slick-next__arrow {
+    transform: translateX(100%) rotate(-135deg); }
+.slick-prev {
+  left: 0; }
+  .slick-prev__arrow {
+    transform: translateX(100%) rotate(45deg); }
+.slick-dots li {
+  transform-origin: center;
+  transform: scale(5);
+  margin: 15px;
+  width: 15px; }
+  .slick-dots li button:before {
+    width: 10px; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,8 +1,117 @@
+body#portfolio {
+  height: 100vh;
+}
+
+
+
 .portfolio {
-  width: 90%;
-  max-width: 800px;
+  width: 92%;
+  max-width: 1000px;
   margin: 0 auto;
+  height: 80vh;
+  h4, h3 {
+    @extend %adria_groteskregular;
+    display: inline-block;
+    font-size: 26px;
+  }
   &__project {
     @extend %vertical-center-flex;
+    @extend %signika_negativelight;
+    ul {
+      margin-bottom: 50px;
+    }
+    a:not([href^="img/"]) {
+      // float: right;
+      @extend .cta__button;
+      padding: 5px 10px;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      max-width: 100px;
+    }
   }
+  &__project__links {
+    width: 300px;
+    display: inline-block;
+    float: right;
+    margin-top: 35px;
+  }
+  img {
+    width: 100%;
+    max-width: 764px;
+    margin: 0 auto;
+  }
+}
+
+.games{
+  @extend %vertical-center-flex;
+  h3, h4 {
+    display: block;
+  }
+  &__sample {
+    width: 32%;
+    display: inline-block;
+    text-align: center;
+    h3, h4 {
+      margin: 0 auto;
+      font-size: 16px;
+    }
+    img {
+      width: 100%;
+    }
+    a {
+      margin: 10px auto !important;
+      font-size: 13px;
+      width: 30% !important;
+      padding: 5px 0px !important;
+    }
+  }
+}
+
+.slick {
+
+  &-slide {
+    margin: 0 40px;
+  }
+
+  &-dots {
+    position: static !important;
+  }
+
+  &-next, &-prev {
+    width: 50px;
+    height: 50px;
+    &__arrow {
+      border-left: 1px solid black;
+      border-bottom: 1px solid black;
+      height: 15px;
+      width: 15px;
+    }
+  }
+
+  &-next {
+    right: 0;
+    &__arrow {
+      transform: translateX(100%) rotate(-135deg);
+    }
+  }
+  &-prev {
+    left: 0;
+    &__arrow {
+      transform: translateX(100%) rotate(45deg);
+    }
+  }
+  &-dots li {
+    transform-origin: center;
+    transform: scale(5);
+    margin: 15px;
+    width: 15px;
+    button:before {
+      width: 10px;
+    }
+  }
+}
+
+@include resp_maxw(768px) {
+
 }
