@@ -1,9 +1,10 @@
-let $pt = $("#pt");
-let $mouse = $("#mouse");
-let scrollArea = document.getElementById('hero-scroll-area');
+var $pt = $("#pt");
+var $mouse = $("#mouse");
+var scrollArea = document.getElementById('hero-scroll-area');
 
-for (let ii = 1; ii <= 12; ii++) {
-  let wp = new Waypoint({
+var wp, filter;
+for (var ii = 1; ii <= 12; ii++) {
+  wp = new Waypoint({
     element: scrollArea,
     handler: function(direction) {
       // $pt.css({
@@ -13,7 +14,7 @@ for (let ii = 1; ii <= 12; ii++) {
       //   '-o-filter'      : 'blur(' + ii + 'px)',
       //   '-ms-filter'     : 'blur(' + ii + 'px)'
       // });
-      let filter = 'filter-' + ii;
+      var filter = 'filter-' + ii;
       $pt.addClass(filter);
     },
     offset: (Waypoint.viewportHeight() / 25 * (ii + 1) + 100) * -1
@@ -24,11 +25,11 @@ for (let ii = 1; ii <= 12; ii++) {
 
 
 
-let $iconsText = $('.intro__icons__text');
-let $intro = $('.intro');
-let slideTime = 1;
-let introPlaced = false;
-let titleWp = new Waypoint({
+var $iconsText = $('.intro__icons__text');
+var $intro = $('.intro');
+var slideTime = 1;
+var introPlaced = false;
+var titleWp = new Waypoint({
   element: $intro,
   handler: function(direction) {
     if (direction == "down" && !introPlaced) {
@@ -42,8 +43,8 @@ let titleWp = new Waypoint({
 
 
 
-let $iconLinks = $('.intro__icons-wrapper a');
-let introWp = new Waypoint({
+var $iconLinks = $('.intro__icons-wrapper a');
+var introWp = new Waypoint({
   element: $intro, 
   handler: function(direction) {
     TweenMax.staggerTo($iconLinks, 2.5, {
@@ -61,9 +62,9 @@ let introWp = new Waypoint({
 
 
 
-let $about = $('.about-wrapper');
-let $aboutText = $('.about-wrapper p');
-let aboutWp = new Waypoint({ 
+var $about = $('.about-wrapper');
+var $aboutText = $('.about-wrapper p');
+var aboutWp = new Waypoint({ 
   element: $about,
   handler: function(direction) {
     TweenMax.staggerTo($aboutText, 1.5, {
@@ -78,9 +79,9 @@ let aboutWp = new Waypoint({
 
 
 
-let $cta = $('.cta');
-let $ctaText = $('.cta-wrapper').children();
-let ctaWp = new Waypoint({ 
+var $cta = $('.cta');
+var $ctaText = $('.cta-wrapper').children();
+var ctaWp = new Waypoint({ 
   element: $cta,
   handler: function(direction) {
     TweenMax.staggerTo($ctaText, 1.5, {

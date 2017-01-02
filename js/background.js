@@ -1,4 +1,3 @@
-
 //// 1. Define Space and Form
 var colors = {
   a1: "#820e80", a2: "#82380e", a3: "#2e43eb", a4: "#ffe359",
@@ -22,13 +21,14 @@ var Vectors = {
 
 // GSAP 
 var mouseTweenVals = [];
-var numTweens = 12;
-var time = numTweens * 2;
+var numTweens = 4;
+var time = numTweens * 2.5;
 
-for( let i = 0; i < numTweens; i++) {
-    let x = Math.random() * space.size.x / 2;
+var x, y;
+for( var i = 0; i < numTweens; i++) {
+    x = Math.random() * space.size.x / 2;
     x *= Math.floor(Math.random()*2) == 1 ? 1 : -1; // 50% chance of negative val
-    let y = Math.random() * space.size.y;    
+    y = Math.random() * space.size.y;    
     mouseTweenVals.push({x, y});
 }
 TweenMax.to("#mouse", time, {
@@ -119,12 +119,13 @@ space.add({
     var subline4 = new Line( mouse ).to( sub4.$add( mouse ) );
     form.line( subline4 );
 
-    let difSums = {};
-    let mouseX = mouse.x; 
-    let mouseY = mouse.y;
+    var difSums = {};
+    var mouseX = mouse.x; 
+    var mouseY = mouse.y;
+    var vector, difSum;
     for( v in Vectors) {
-        let vector = Vectors[v];
-        let difSum = (Math.abs(vector.x - mouseX) + Math.abs(vector.y - mouseY));
+        vector = Vectors[v];
+        difSum = (Math.abs(vector.x - mouseX) + Math.abs(vector.y - mouseY));
         difSums[v] = difSum;
     }
     var closest = this._getClosestPoint(difSums);

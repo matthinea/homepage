@@ -6,6 +6,7 @@ body#portfolio {
 
 .portfolio {
   width: 92%;
+  color: white;
   max-width: 1000px;
   margin: 0 auto;
   height: 80vh;
@@ -70,6 +71,11 @@ body#portfolio {
 
 .slick {
 
+  &-arrows-wrapper {
+    position:relative;
+    top: -50vh;
+  }
+
   &-slide {
     margin: 0 40px;
   }
@@ -78,7 +84,10 @@ body#portfolio {
     position: static !important;
   }
 
+
   &-next, &-prev {
+    display: inline-block;
+    position: absolute;
     width: 50px;
     height: 50px;
     &__arrow {
@@ -101,15 +110,38 @@ body#portfolio {
       transform: translateX(100%) rotate(45deg);
     }
   }
-  &-dots li {
-    transform-origin: center;
-    transform: scale(5);
-    margin: 15px;
-    width: 15px;
-    button:before {
-      width: 10px;
+  &-dots {
+    margin-top: 25px;
+    li {
+      transform-origin: center;
+      // transform: scale(5);
+      margin: 15px;
+      width: 15px;
+      button:before {
+        width: 10px;
+      }
     }
   }
+}
+
+
+.slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    content: '';
+    background-color: black;
+    border-radius: 100%;
+    text-align: center;
+    opacity: .25;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 @include resp_maxw(768px) {
