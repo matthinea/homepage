@@ -88,6 +88,9 @@ body {
 #hero-scroll-area {
   height: 100vh; }
 
+@media all and (max-width: 768px) {
+  #mouse {
+    position: absolute; } }
 .intro {
   text-align: center;
   color: white;

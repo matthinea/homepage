@@ -31,3 +31,9 @@
 #hero-scroll-area {
   height: 100vh;
 }
+
+@include resp_maxw(768px) {
+  #mouse {
+    position: absolute;
+  }
+}
