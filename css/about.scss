@@ -18,7 +18,8 @@
     line-height: 1.8em;
   }
   a {
+    color: white;
+    border-bottom: 1px solid $link-underline-color;
     text-decoration: none;
-    color: $link-blue;
   }
 }
