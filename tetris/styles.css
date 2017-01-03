@@ -1,0 +1,32 @@
+#container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#dmetris {
+  margin: 20px;
+}
+
+.grid{
+  border: 2px solid black;
+}
+
+.column {
+  display: block;
+}
+
+.cell {
+  border: 1px solid grey;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+}
+
+img#hinea_studios {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  /* top: 92vh; */
+  /* left: 50%; */
+  top: 20px;
+}

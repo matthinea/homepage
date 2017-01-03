@@ -8,18 +8,23 @@ body#portfolio {
   width: 92%;
   color: white;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 150px auto 0;
   height: 80vh;
   h4, h3 {
     @extend %adria_groteskregular;
     display: inline-block;
-    font-size: 26px;
+    font-size: 28px;
   }
   &__project {
+    letter-spacing: 0.055em;
     @extend %vertical-center-flex;
     @extend %signika_negativelight;
     ul {
+      font-size: 16px;
       margin-bottom: 50px;
+    }
+    li {
+      line-height: 25px;
     }
     a:not([href^="img/"]) {
       // float: right;
@@ -55,7 +60,7 @@ body#portfolio {
     text-align: center;
     h3, h4 {
       margin: 0 auto;
-      font-size: 16px;
+      font-size: 20px;
     }
     img {
       width: 100%;
@@ -90,6 +95,7 @@ body#portfolio {
     position: absolute;
     width: 50px;
     height: 50px;
+    cursor: pointer;
     &__arrow {
       border-left: 1px solid black;
       border-bottom: 1px solid black;
@@ -99,15 +105,15 @@ body#portfolio {
   }
 
   &-next {
-    right: 0;
+    right: 10px;
     &__arrow {
-      transform: translateX(100%) rotate(-135deg);
+      transform: translate(100%, 100%) rotate(-135deg);
     }
   }
   &-prev {
-    left: 0;
+    left: 10px;
     &__arrow {
-      transform: translateX(100%) rotate(45deg);
+      transform: translate(100%, 100%) rotate(45deg);
     }
   }
   &-dots {

@@ -1,30 +1,32 @@
 var $pt = $("#pt");
 var $mouse = $("#mouse");
-var scrollArea = document.getElementById('hero-scroll-area');
+var $portfolio = $(".portfolio");
+// var scrollArea = document.getElementById('hero-scroll-area');
 
-var wp, filter;
-for (var ii = 1; ii <= 12; ii++) {
-  wp = new Waypoint({
-    element: scrollArea,
-    handler: function(direction) {
-      // $pt.css({
-      //   'filter'         : 'blur(' + ii + 'px)',
-      //   '-webkit-filter' : 'blur(' + ii + 'px)',
-      //   '-moz-filter'    : 'blur(' + ii + 'px)',
-      //   '-o-filter'      : 'blur(' + ii + 'px)',
-      //   '-ms-filter'     : 'blur(' + ii + 'px)'
-      // });
-      var filter = 'filter-' + ii;
-      $pt.addClass(filter);
-    },
-    offset: (Waypoint.viewportHeight() / 25 * (ii + 1) + 100) * -1
-  })
-}
+// // Filtering is too nonperformant - not implemented for now
+// var wp, filter;
+// for (var ii = 1; ii <= 12; ii++) {
+//   wp = new Waypoint({
+//     element: scrollArea,
+//     handler: function(direction) {
+//       // var filter = 'filter-' + ii;
+//       // $pt.addClass(filter);
+//     },
+//     offset: (Waypoint.viewportHeight() / 25 * (ii + 1) + 100) * -1
+//   })
+// }
+
+$('.scroll-to-portfolio').on('mousedown', function(event) {
+  // event.preventDefault();
+  console.log(event);
+  window.scrollTo(0, $portfolio.offset().top);
+  $('#slick-slide02').click();
+})
 
 
 
 
-
+// waypoints
 var $iconsText = $('.intro__icons__text');
 var $intro = $('.intro');
 var slideTime = 1;

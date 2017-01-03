@@ -1,0 +1,44 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  line-height: 0;
+  text-align: center;
+}
+
+#game-grid {
+  margin: 0 auto;
+  content: center;
+  padding: auto;
+}
+
+.cell {
+  height: 10px;
+  width: 10px;
+  display: inline-block;
+}
+
+.snake {
+  background-color: darkgreen;
+}
+
+.food {
+  background-color: red;
+}
+
+.row {
+  display: block;
+}
+
+.border {
+  background-color: red;
+}
+
+.food {
+  background-color: hotpink;
+}
+
+
+#game-title {
+  margin-top: 80px;
+  font-family: Helvetica, sans-serif;
+}

@@ -281,19 +281,24 @@ body#portfolio {
   width: 92%;
   color: white;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 150px auto 0;
   height: 80vh; }
   .portfolio h4, .portfolio h3 {
     display: inline-block;
-    font-size: 26px; }
-  .portfolio__project ul {
-    margin-bottom: 50px; }
-  .portfolio__project a:not([href^="img/"]) {
-    padding: 5px 10px;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    max-width: 100px; }
+    font-size: 28px; }
+  .portfolio__project {
+    letter-spacing: 0.055em; }
+    .portfolio__project ul {
+      font-size: 16px;
+      margin-bottom: 50px; }
+    .portfolio__project li {
+      line-height: 25px; }
+    .portfolio__project a:not([href^="img/"]) {
+      padding: 5px 10px;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      max-width: 100px; }
   .portfolio__project__links {
     width: 300px;
     display: inline-block;
@@ -312,7 +317,7 @@ body#portfolio {
   text-align: center; }
   .games__sample h3, .games__sample h4 {
     margin: 0 auto;
-    font-size: 16px; }
+    font-size: 20px; }
   .games__sample img {
     width: 100%; }
   .games__sample a {
@@ -332,20 +337,21 @@ body#portfolio {
   display: inline-block;
   position: absolute;
   width: 50px;
-  height: 50px; }
+  height: 50px;
+  cursor: pointer; }
   .slick-next__arrow, .slick-prev__arrow {
     border-left: 1px solid black;
     border-bottom: 1px solid black;
     height: 15px;
     width: 15px; }
 .slick-next {
-  right: 0; }
+  right: 10px; }
   .slick-next__arrow {
-    transform: translateX(100%) rotate(-135deg); }
+    transform: translate(100%, 100%) rotate(-135deg); }
 .slick-prev {
-  left: 0; }
+  left: 10px; }
   .slick-prev__arrow {
-    transform: translateX(100%) rotate(45deg); }
+    transform: translate(100%, 100%) rotate(45deg); }
 .slick-dots {
   margin-top: 25px; }
   .slick-dots li {
