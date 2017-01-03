@@ -88,7 +88,7 @@ body {
 #hero-scroll-area {
   height: 100vh; }
 
-@media all and (max-width: 425px) {
+@media all and (max-width: 545px) {
   #pt, #mouse {
     position: absolute; } }
 .intro {
@@ -147,7 +147,7 @@ body {
     .intro__icons__text.showing {
       opacity: 0.8; }
 
-@media all and (max-width: 425px) {
+@media all and (max-width: 545px) {
   .intro__icons__links a {
     width: 25%; } }
 .about {
@@ -182,15 +182,15 @@ body {
     color: inherit;
     padding: 10px 0;
     opacity: 0; }
-  .cta__button, .portfolio__project a:not([href^="img/"]) {
+  .cta__button, .portfolio__project a {
     display: inline-block;
     background-color: #80b2e9;
     max-width: 200px;
     width: 50%;
     border-radius: 4px; }
-    .cta__button:not(:last-child), .portfolio__project a:not(:last-child):not([href^="img/"]) {
+    .cta__button:not(:last-child), .portfolio__project a:not(:last-child) {
       margin-right: 40px; }
-    .cta__button:hover, .portfolio__project a:hover:not([href^="img/"]) {
+    .cta__button:hover, .portfolio__project a:hover {
       background-color: #6aa4e6; }
 
 .slick-dotted.slick-slider {
@@ -275,14 +275,15 @@ body#portfolio {
       margin-bottom: 50px; }
     .portfolio__project li {
       line-height: 25px; }
-    .portfolio__project a:not([href^="img/"]) {
+    .portfolio__project a {
       padding: 5px 10px;
       color: white;
       text-align: center;
       text-decoration: none;
       max-width: 100px; }
   .portfolio__project__links {
-    width: 300px;
+    max-width: 300px;
+    width: 40%;
     display: inline-block;
     float: right;
     margin-top: 35px; }
@@ -303,10 +304,10 @@ body#portfolio {
   .games__sample img {
     width: 100%; }
   .games__sample a {
-    margin: 10px auto !important;
+    margin: 10px auto;
     font-size: 13px;
-    width: 30% !important;
-    padding: 5px 0px !important; }
+    width: 30%;
+    padding: 5px 0px; }
 
 .slick-arrows-wrapper {
   position: relative;
@@ -360,5 +361,46 @@ body#portfolio {
   color: black;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+@media all and (max-width: 545px) {
+  .portfolio h4, .portfolio h3 {
+    margin: 0 auto; }
+  .portfolio__project {
+    text-align: center; }
+    .portfolio__project ul {
+      text-align: left;
+      margin: 0 40px 30px 10px; }
+    .portfolio__project a {
+      width: 34%; }
+      .portfolio__project a:not(:last-child) {
+        margin-right: 13%; }
+      .portfolio__project a:last-child {
+        float: right; }
+  .portfolio__project__links {
+    float: none;
+    display: block;
+    margin: 20px auto;
+    width: 95%; }
+
+  .slick-slide {
+    margin: 0; }
+
+  .games__sample {
+    width: 100%;
+    max-height: 31%;
+    overflow: hidden; }
+    .games__sample__links {
+      width: 40%;
+      margin-left: 10%;
+      float: left;
+      display: inline-block; }
+    .games__sample a:not(:last-child), .games__sample a:last-child {
+      display: block;
+      float: left;
+      width: 100%;
+      margin-right: 0; }
+    .games__sample img {
+      width: 40%;
+      float: right; } }
 
 /*# sourceMappingURL=styles.css.map */

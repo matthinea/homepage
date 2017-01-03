@@ -26,7 +26,7 @@ body#portfolio {
     li {
       line-height: 25px;
     }
-    a:not([href^="img/"]) {
+    a {
       // float: right;
       @extend .cta__button;
       padding: 5px 10px;
@@ -37,7 +37,8 @@ body#portfolio {
     }
   }
   &__project__links {
-    width: 300px;
+    max-width: 300px;
+    width: 40%;
     display: inline-block;
     float: right;
     margin-top: 35px;
@@ -66,10 +67,10 @@ body#portfolio {
       width: 100%;
     }
     a {
-      margin: 10px auto !important;
+      margin: 10px auto;
       font-size: 13px;
-      width: 30% !important;
-      padding: 5px 0px !important;
+      width: 30%;
+      padding: 5px 0px;
     }
   }
 }
@@ -150,6 +151,58 @@ body#portfolio {
     -moz-osx-font-smoothing: grayscale;
 }
 
-@include resp_maxw(768px) {
+@include resp_maxw(545px) {
+  .portfolio {
+    h4, h3 {
+      margin: 0 auto;
+    }
+    &__project {
+      text-align: center;
+      ul {
+        text-align: left;
+        margin: 0 40px 30px 10px;
+      }
+      a {
+        width: 34%;
+        &:not(:last-child) {
+          margin-right: 13%;
+        }
+        &:last-child {
+          float: right;
+        }
 
+      }
+    }
+    &__project__links {
+      float: none;
+      display: block;
+      margin: 20px auto;
+      width: 95%;
+    }
+  }
+  .slick-slide {
+    margin: 0;
+  }
+
+  .games__sample {
+    width: 100%;
+    max-height: 31%;
+    overflow: hidden;
+    &__links {
+      width: 40%;
+      margin-left: 10%;
+      float: left;
+      display: inline-block;
+    }
+    a:not(:last-child), a:last-child {
+      display: block;
+      float: left;
+      width: 100%;
+      margin-right: 0;
+    }
+    img {
+      width: 40%;
+      float: right;
+    }
+  }
 }
