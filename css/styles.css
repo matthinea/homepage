@@ -89,7 +89,7 @@ body {
   height: 100vh; }
 
 @media all and (max-width: 768px) {
-  #mouse {
+  #pt, #mouse {
     position: absolute; } }
 .intro {
   text-align: center;

@@ -33,7 +33,7 @@
 }
 
 @include resp_maxw(768px) {
-  #mouse {
+  #pt, #mouse {
     position: absolute;
   }
 }
