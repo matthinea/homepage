@@ -196,7 +196,8 @@ body {
 @media all and (max-width: 545px) {
   .cta a {
     display: block;
-    margin: 30px auto !important; } }
+    margin: 30px auto !important;
+    width: 100%; } }
 .slick-dotted.slick-slider {
   margin-bottom: 30px; }
 
