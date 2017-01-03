@@ -32,7 +32,7 @@
   height: 100vh;
 }
 
-@include resp_maxw(768px) {
+@include resp_maxw(425px) {
   #pt, #mouse {
     position: absolute;
   }

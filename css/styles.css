@@ -88,7 +88,7 @@ body {
 #hero-scroll-area {
   height: 100vh; }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 425px) {
   #pt, #mouse {
     position: absolute; } }
 .intro {
@@ -147,6 +147,9 @@ body {
     .intro__icons__text.showing {
       opacity: 0.8; }
 
+@media all and (max-width: 425px) {
+  .intro__icons__links a {
+    width: 25%; } }
 .about {
   letter-spacing: 0.06em;
   height: 100vh; }
