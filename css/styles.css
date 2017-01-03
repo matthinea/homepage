@@ -76,34 +76,9 @@ body {
 #pt {
   width: 100vw;
   height: 100vh;
-  filter: blur(1px);
   position: fixed;
   top: 0;
   z-index: -1; }
-  #pt.filter-1 {
-    filter: blur(1px); }
-  #pt.filter-2 {
-    filter: blur(2px); }
-  #pt.filter-3 {
-    filter: blur(3px); }
-  #pt.filter-4 {
-    filter: blur(4px); }
-  #pt.filter-5 {
-    filter: blur(5px); }
-  #pt.filter-6 {
-    filter: blur(6px); }
-  #pt.filter-7 {
-    filter: blur(7px); }
-  #pt.filter-8 {
-    filter: blur(8px); }
-  #pt.filter-9 {
-    filter: blur(9px); }
-  #pt.filter-10 {
-    filter: blur(10px); }
-  #pt.filter-11 {
-    filter: blur(11px); }
-  #pt.filter-12 {
-    filter: blur(12px); }
 
 #mouse {
   position: fixed;

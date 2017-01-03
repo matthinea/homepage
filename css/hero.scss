@@ -1,7 +1,7 @@
 #pt {
   width: 100vw; 
   height: 100vh;
-  filter: blur(1px);
+  // filter: blur(1px);
   position: fixed;
   top: 0;
   z-index: -1;
@@ -14,11 +14,11 @@
   // transform: translate3d(0,0,0);
   // transform: translateZ(0);
   // filter: blur(14px);
-  @for $i from 1 through 12 {
-    &.filter-#{$i} {
-      filter: blur(#{$i + 'px'})
-    }
-  }
+  // @for $i from 1 through 12 {
+  //   &.filter-#{$i} {
+  //     filter: blur(#{$i + 'px'})
+  //   }
+  // }
 }
 
 #mouse {
