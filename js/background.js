@@ -184,5 +184,5 @@ space.add({
 
 // 4. Start playing
 // space.bindMouse();
-space.bindTouch();
+// space.bindTouch();
 space.play();
