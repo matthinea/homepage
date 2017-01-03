@@ -32,3 +32,12 @@
   }
 }
 
+@include resp_maxw(545px) {
+  .cta {
+    a {
+      display: block;
+      margin: 30px auto !important;
+    }
+  }
+}
+

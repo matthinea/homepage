@@ -193,6 +193,10 @@ body {
     .cta__button:hover, .portfolio__project a:hover {
       background-color: #6aa4e6; }
 
+@media all and (max-width: 545px) {
+  .cta a {
+    display: block;
+    margin: 30px auto !important; } }
 .slick-dotted.slick-slider {
   margin-bottom: 30px; }
 
