@@ -79,6 +79,30 @@ body {
   position: fixed;
   top: 0;
   z-index: -1; }
+  #pt_svg.filter-1 {
+    filter: blur(1px); }
+  #pt_svg.filter-2 {
+    filter: blur(2px); }
+  #pt_svg.filter-3 {
+    filter: blur(3px); }
+  #pt_svg.filter-4 {
+    filter: blur(4px); }
+  #pt_svg.filter-5 {
+    filter: blur(5px); }
+  #pt_svg.filter-6 {
+    filter: blur(6px); }
+  #pt_svg.filter-7 {
+    filter: blur(7px); }
+  #pt_svg.filter-8 {
+    filter: blur(8px); }
+  #pt_svg.filter-9 {
+    filter: blur(9px); }
+  #pt_svg.filter-10 {
+    filter: blur(10px); }
+  #pt_svg.filter-11 {
+    filter: blur(11px); }
+  #pt_svg.filter-12 {
+    filter: blur(12px); }
 
 #mouse {
   position: fixed;

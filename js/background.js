@@ -1,10 +1,17 @@
 //// 1. Define Space and Form
 var colors = {
   a1: "#820e80", a2: "#82380e", a3: "#2e43eb", a4: "#ffe359",
-  b1: "#96bfed", b2: "#f5ead6", b3: "#f1f3f7", b4: "grey"
+  b1: "#96bfed", b2: "#f5ead6", b3: "#f1f3f7", b4: "#777"
 }
-var space = new CanvasSpace("pt").setup( {bgcolor: colors.b4, retina: false} );
-var form = new Form( space );
+
+function ready(bounds, elem) {
+  form.scope("item", elem); // initiate the scope which uses the svg dom as parent node
+  // space.bindMouse();
+  space.play();
+}
+
+var space = new SVGSpace("pt", ready)
+var form = new SVGForm( space );
 
 
 //// 2. Create Elements
@@ -44,6 +51,8 @@ TweenMax.to("#mouse", time, {
 //// 3. Visualize, Animate, Interact
 space.add({
   animate: function(time, fps, context) {
+
+    form.enterScope( this )
 
     var position = $('#mouse').position();
     mouse.set(position.left, position.top);

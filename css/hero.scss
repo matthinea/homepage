@@ -14,11 +14,13 @@
   // transform: translate3d(0,0,0);
   // transform: translateZ(0);
   // filter: blur(14px);
-  // @for $i from 1 through 12 {
-  //   &.filter-#{$i} {
-  //     filter: blur(#{$i + 'px'})
-  //   }
-  // }
+  &_svg {
+    @for $i from 1 through 12 {
+      &.filter-#{$i} {
+        filter: blur(#{$i + 'px'})
+      }
+    }
+  }
 }
 
 #mouse {
