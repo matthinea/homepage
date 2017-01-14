@@ -5,6 +5,8 @@ body#portfolio {
 
 
 .portfolio {
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
   width: 92%;
   color: white;
   max-width: 1000px;
@@ -38,7 +40,7 @@ body#portfolio {
   }
   &__project__links {
     max-width: 300px;
-    width: 40%;
+    width: 70%;
     display: inline-block;
     float: right;
     margin-top: 35px;
@@ -47,6 +49,10 @@ body#portfolio {
     width: 100%;
     max-width: 764px;
     margin: 0 auto;
+  }
+  &.showing {
+    opacity: 1;
+    transform: translateY(-100px);
   }
 }
 

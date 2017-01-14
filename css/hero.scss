@@ -17,7 +17,7 @@
   &_svg {
     @for $i from 1 through 12 {
       &.filter-#{$i} {
-        filter: blur(#{$i + 'px'})
+        opacity: 1 - ($i / 14);
       }
     }
   }
@@ -32,6 +32,13 @@
 
 #hero-scroll-area {
   height: 100vh;
+}
+
+.hero {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 @include resp_maxw(545px) {

@@ -1,7 +1,7 @@
 //// 1. Define Space and Form
 var colors = {
   a1: "#820e80", a2: "#82380e", a3: "#2e43eb", a4: "#ffe359",
-  b1: "#96bfed", b2: "#f5ead6", b3: "#f1f3f7", b4: "#777"
+  b1: "#96bfed", b2: "#f5ead6", b3: "#f1f3f7", b4: "#ddd"
 }
 
 function ready(bounds, elem) {
@@ -29,7 +29,7 @@ var Vectors = {
 // GSAP 
 var mouseTweenVals = [];
 var numTweens = 4;
-var time = numTweens * 2.5;
+var time = numTweens * 3.3;
 
 var x, y;
 for( var i = 0; i < numTweens; i++) {
@@ -59,9 +59,7 @@ space.add({
 
     form.stroke("#9ab");
 
-    // mouse vector. Gray line.
     var mouseVec = mouse.$subtract( center );
-    // form.line( new Line( center ).to( mouseVec.$add( center ) ) );
 
     form.stroke("#fff");
 
@@ -107,18 +105,7 @@ space.add({
     var add4 = add2.$subtract(sub1);
     form.line( new Line( center ).to ( add4.$add( center ) ) );
     Vectors['add3'] = add3.$add( center);
-    Vectors['add4'] = add4.$add( center);
-
-    // then automate rotation of "mouse" (to avoid user interaction)
-
-    // NEW IDEA: "flicker" some lines on and off depending on modulos of time
-
-
-    // NEW IDEA: add vectors peppered around perimeter (use pt's Gaussian) and iteratively add and subtract
-
-    // NEW IDEA: Randomly position unmoving blue vectors
-    // NEW IDEA: scale center from mousePos as in circleIntersectPoint.js
-    // NEW IDEA: thickness of lines change depending on nearness to center. 
+    Vectors['add4'] = add4.$add( center); 
 
     form.stroke( colors.b3, 1 );
     var sub3 = vec1.$subtract( mouseVec );
@@ -162,7 +149,7 @@ space.add({
     this.onMouseAction( type, x, y );
   },
 
-  // UTILS
+  //  P R I V A T E
 
   _getClosestPoint: function(difSums) {
     var closest;
@@ -191,7 +178,4 @@ space.add({
   }
 });
 
-// 4. Start playing
-// space.bindMouse();
-// space.bindTouch();
 space.play();

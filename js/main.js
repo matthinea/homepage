@@ -1,21 +1,23 @@
-let $pt = $("#pt");
-let $pt_svg = $("#pt_svg")
+var $pt = $("#pt");
+var $pt_svg = $("#pt_svg")
 var $mouse = $("#mouse");
 var $portfolio = $(".portfolio");
 var scrollArea = document.getElementById('hero-scroll-area');
 
-// Filtering is too nonperformant - not implemented for now
 var wp;
-for (var ii = 1; ii <= 12; ii++) {
-  let filter = 'filter-' + ii;
+var _loop = function _loop() {
+  var filter = 'filter-' + ii;
   wp = new Waypoint({
     element: scrollArea,
-    handler: function(direction) {
-      console.log(filter);
+    handler: function handler(direction) {
       $pt_svg.toggleClass(filter);
     },
-    offset: -100 * ii
-  })
+    offset: -40 * ii
+  });
+};
+
+for (var ii = 1; ii <= 12; ii++) {
+  _loop();
 }
 
 $('.scroll-to-portfolio').on('mousedown', function(event) {
@@ -79,7 +81,14 @@ var aboutWp = new Waypoint({
 })
 
 
-
+var $portfolio = $(".portfolio");
+var portfolioWp = new Waypoint({ 
+  element: $portfolio,
+  handler: function(direction) {
+    $portfolio.addClass('showing');
+  }, 
+  offset: $portfolio.height() / 2 + 100
+})
 
 
 

@@ -14,6 +14,25 @@ $bg-anchor-color: #96bfed;
   justify-content: center;
 }
 
+.scroll-invitation {
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  padding-top: 15px;
+
+  position: static;
+  margin: 0 auto;
+  margin-top: 25px;
+
+  &-arrow {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    transform: translate(80%, 50%) rotate(45deg);
+    width: 30px;
+    height: 30px;
+  }
+}
+
 @mixin resp_maxw( $width ) {
   @media all and ( max-width: $width ) {
     @content;
@@ -22,12 +41,7 @@ $bg-anchor-color: #96bfed;
 
 body {
   margin: 0;
-   &.portfolio {
-    background-color: #fff;
-  }
-   &.index {
-    background-color: grey;
-  }
+  background-color: grey;
 }
 
 

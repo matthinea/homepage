@@ -51,7 +51,8 @@
     background: transparent;
 }
 .slick-dots li button:hover,
-.slick-dots li button:focus
+.slick-dots li button:focus, 
+.slick-dots li button:active
 {
     outline: none;
 }
@@ -87,3 +88,9 @@
     opacity: .75;
     color: black;
 }
+
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
