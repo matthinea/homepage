@@ -1,15 +1,12 @@
-var $heroArrow = $('.hero .scroll-invitation');
-var $introArrow = $('.intro .scroll-invitation');
-var $aboutArrow = $('.about .scroll-invitation');
+var $arrow = $('.scroll-invitation');
+var frameNum = 1;
 
-var arrows = [
-  $heroArrow,
-  $introArrow,
-  $aboutArrow
-]
-
-for(let idx = 0; idx < arrows.length; idx++) {
-  arrows[idx].on('click', function(event) {
-    $('html, body').animate({scrollTop: window.innerHeight * (idx + 1)}, 1000, "easeOutCubic");
-  })
-}
+$arrow.on('click', function(event) {
+  $('html, body').animate({scrollTop: window.innerHeight * frameNum}, 1000, "easeOutCubic");
+  if(frameNum <= 2) {
+      $arrow.css({
+      "transform": "translateY(" + (window.innerHeight * frameNum) + "px)"
+    });
+    frameNum++;
+  } 
+})

@@ -1,11 +1,11 @@
-//// 1. Define Space and Form
+// Setup canvas
 var colors = {
   a1: "#820e80", a2: "#82380e", a3: "#2e43eb", a4: "#ffe359",
   b1: "#96bfed", b2: "#f5ead6", b3: "#f1f3f7", b4: "#ddd"
 }
 
 function ready(bounds, elem) {
-  form.scope("item", elem); // initiate the scope which uses the svg dom as parent node
+  form.scope("item", elem);
   // space.bindMouse();
   space.play();
 }
@@ -14,7 +14,7 @@ var space = new SVGSpace("pt", ready)
 var form = new SVGForm( space );
 
 
-//// 2. Create Elements
+// Create Elements
 var center = new Vector(space.size.$divide(2));
 var mouse = new Vector( space.size.x/2, space.size.y/1.35);
 // relative vectors - used only as dist from center
@@ -47,12 +47,11 @@ TweenMax.to("#mouse", time, {
     ease: Power0.easeNone, repeat: -1, yoyo: true
 })
 
-
-//// 3. Visualize, Animate, Interact
+// prepare animation
 space.add({
   animate: function(time, fps, context) {
 
-    form.enterScope( this )
+    form.enterScope( this ) // for SVG in lieu of canvas
 
     var position = $('#mouse').position();
     mouse.set(position.left, position.top);
@@ -99,6 +98,7 @@ space.add({
     Vectors['sub5'] = sub5.$add(center);
     Vectors['sub6'] = sub6.$add(center);
 
+    // more vectors
     form.stroke("orange");
     var add3 = add1.$subtract(sub2);
     form.line( new Line( center ).to ( add3.$add( center ) ) );
@@ -115,6 +115,7 @@ space.add({
     var subline4 = new Line( mouse ).to( sub4.$add( mouse ) );
     form.line( subline4 );
 
+    // math to get vector endpoints nearest to 'mouse'
     var difSums = {};
     var mouseX = mouse.x; 
     var mouseY = mouse.y;
@@ -134,19 +135,9 @@ space.add({
 
 
 
-    // Draw mouse
+    // draw 'mouse'
     form.fill( "black").stroke(false);
     form.point( mouse, 3, true );
-  },
-
-  onMouseAction: function(type, x, y, evt) {
-    if (type=="move") {
-      mouse.set(x,y);
-    }
-  },
-
-  onTouchAction: function(type, x, y, evt) {
-    this.onMouseAction( type, x, y );
   },
 
   //  P R I V A T E
@@ -178,4 +169,5 @@ space.add({
   }
 });
 
+// play
 space.play();

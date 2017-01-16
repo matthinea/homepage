@@ -19,14 +19,15 @@ $bg-anchor-color: #96bfed;
   height: 80px;
   text-align: center;
   padding-top: 15px;
-
+  z-index: 200;
   position: static;
   margin: 0 auto;
   margin-top: 25px;
+  transition: transform 1s ease-out;
 
   &-arrow {
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
     transform: translate(80%, 50%) rotate(45deg);
     width: 30px;
     height: 30px;

@@ -68,7 +68,7 @@ var introWp = new Waypoint({
 
 
 
-var $about = $('.about-wrapper');
+var $about = $('.about');
 var $aboutText = $('.about-wrapper p');
 var aboutWp = new Waypoint({ 
   element: $about,
@@ -76,8 +76,8 @@ var aboutWp = new Waypoint({
     TweenMax.staggerTo($aboutText, 1.5, {
       opacity: 1,
     }, 0.2);
-  }, 
-  offset: $about.height() / 2 + 100
+  },
+  offset: 100
 })
 
 
