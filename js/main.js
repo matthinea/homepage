@@ -22,9 +22,11 @@ for (var ii = 1; ii <= 12; ii++) {
 
 $('.scroll-to-portfolio').on('mousedown', function(event) {
   // event.preventDefault();
-  console.log(event);
-  window.scrollTo(0, $portfolio.offset().top);
-  $('#slick-slide02').click();
+  console.log($portfolio.offset().top - $portfolio.css('margin-top'));
+  window.scrollTo(0, $about.offset().top + $about.outerHeight(true));
+  if (event.currentTarget.innerHTML === 'browser games') {
+    $('#slick-slide02').click();
+  }
 })
 
 
@@ -102,4 +104,36 @@ var ctaWp = new Waypoint({
     }, 0.2);
   }, 
   offset: 50
-})
+});
+
+
+$(document).ready(function(){
+  $('.portfolio').slick({
+    dots: true,
+    fade: true,
+    nextArrow: '.slick-next',
+    prevArrow: '.slick-prev',
+    responsive: [
+      {
+        breakpoint: 425,
+        settings: {
+          fade: false
+        }
+      }
+    ]
+  });
+});
+
+
+var $arrow = $('.scroll-invitation');
+var frameNum = 1;
+
+$arrow.on('click', function(event) {
+  $('html, body').animate({scrollTop: window.innerHeight * frameNum}, 1000, "easeOutCubic");
+  if(frameNum <= 2) {
+      $arrow.css({
+      "transform": "translateY(" + (window.innerHeight * frameNum) + "px)"
+    });
+    frameNum++;
+  } 
+});

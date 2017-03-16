@@ -84,7 +84,9 @@ body#portfolio {
 .slick {
 
   &-arrows-wrapper {
-    position:relative;
+    position: relative;
+    max-width: 1200px;
+    width: 90%;
     top: -50vh;
   }
 
@@ -123,6 +125,8 @@ body#portfolio {
       transform: translate(100%, 100%) rotate(45deg);
     }
   }
+
+
   &-dots {
     margin-top: 25px;
     li {
@@ -210,5 +214,13 @@ body#portfolio {
       width: 40%;
       float: right;
     }
+  }
+}
+
+
+
+@include resp_maxw(425px) {
+  .slick-next, .slick-prev {
+    display: none !important;
   }
 }
