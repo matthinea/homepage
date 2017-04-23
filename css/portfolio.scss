@@ -7,7 +7,7 @@ body#portfolio {
 .portfolio {
   opacity: 0;
   transition: opacity 1s ease, transform 1s ease;
-  width: 92%;
+  width: 85%;
   color: white;
   max-width: 1000px;
   margin: 150px auto 30px;
@@ -29,7 +29,25 @@ body#portfolio {
       line-height: 25px;
     }
     a {
-      // float: right;
+      color: white;
+      border-bottom: 1px solid $link-underline-color;
+      text-decoration: none;
+      &:hover {
+        border-color: darken($link-underline-color, 10);
+      }
+    }
+    #smyte-link {
+      float: right;
+    }
+  }
+
+  &__project__links {
+    max-width: 300px;
+    width: 70%;
+    display: inline-block;
+    float: right;
+    margin-top: 35px;
+    a {
       @extend .cta__button;
       padding: 5px 10px;
       color: white;
@@ -37,13 +55,6 @@ body#portfolio {
       text-decoration: none;
       max-width: 100px;
     }
-  }
-  &__project__links {
-    max-width: 300px;
-    width: 70%;
-    display: inline-block;
-    float: right;
-    margin-top: 35px;
   }
   img {
     width: 100%;
@@ -73,10 +84,13 @@ body#portfolio {
       width: 100%;
     }
     a {
+      @extend .cta__button;
       margin: 10px auto;
       font-size: 13px;
       width: 30%;
       padding: 5px 0px;
+      color: white;
+      text-decoration: none;
     }
   }
 }
@@ -85,13 +99,14 @@ body#portfolio {
 
   &-arrows-wrapper {
     position: relative;
-    max-width: 1200px;
-    width: 90%;
+    max-width: 1050px;
+    margin: 0 auto;
+    width: 100%;
     top: -50vh;
   }
 
   &-slide {
-    margin: 0 40px;
+    margin: 0 30px !important;
   }
 
   &-dots {
@@ -105,25 +120,18 @@ body#portfolio {
     width: 50px;
     height: 50px;
     cursor: pointer;
-    &__arrow {
-      border-left: 1px solid black;
-      border-bottom: 1px solid black;
-      height: 15px;
-      width: 15px;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.3em;
   }
 
   &-next {
     right: 10px;
-    &__arrow {
-      transform: translate(100%, 100%) rotate(-135deg);
-    }
   }
   &-prev {
     left: 10px;
-    &__arrow {
-      transform: translate(100%, 100%) rotate(45deg);
-    }
   }
 
 
@@ -189,9 +197,12 @@ body#portfolio {
       margin: 20px auto;
       width: 95%;
     }
+    #smyte-link {
+      float: none;
+    }
   }
   .slick-slide {
-    margin: 0;
+    margin: 0 4px !important;
   }
 
   .games__sample {
@@ -223,4 +234,6 @@ body#portfolio {
   .slick-next, .slick-prev {
     display: none !important;
   }
+
+
 }

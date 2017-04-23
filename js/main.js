@@ -110,17 +110,9 @@ var ctaWp = new Waypoint({
 $(document).ready(function(){
   $('.portfolio').slick({
     dots: true,
-    fade: true,
+    fade: false,
     nextArrow: '.slick-next',
     prevArrow: '.slick-prev',
-    responsive: [
-      {
-        breakpoint: 425,
-        settings: {
-          fade: false
-        }
-      }
-    ]
   });
 });
 

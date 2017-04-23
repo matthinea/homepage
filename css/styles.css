@@ -82,6 +82,9 @@
     transform: translate(80%, 50%) rotate(45deg);
     width: 30px;
     height: 30px; }
+  @media all and (max-width: 425px) {
+    .scroll-invitation {
+      display: none; } }
 
 body {
   margin: 0;
@@ -171,9 +174,9 @@ body {
       text-decoration: none;
       display: inline-block;
       opacity: 0;
-      width: 15%; }
+      width: 15%;
+      margin-bottom: 20px; }
     .intro__icons__links .fa {
-      margin-bottom: 30px;
       color: #e6e6e6;
       max-width: 150px; }
       .intro__icons__links .fa:not(:last-child) {
@@ -185,11 +188,14 @@ body {
         fill: #e6e6e6 !important; }
       .intro__icons__links svg path {
         fill: grey !important; }
+    .intro__icons__links a:hover .fa {
+      color: #a9a9a9; }
   .intro__icons__text {
     opacity: 0;
+    margin-top: 0;
     font-size: 14px;
     letter-spacing: 0.08em;
-    letter-spacing: 0.053m;
+    letter-spacing: 0.053 m;
     color: white;
     transition: opacity 1s .5s ease;
     display: block; }
@@ -231,16 +237,16 @@ body {
     color: inherit;
     padding: 10px 0;
     opacity: 0; }
-  .cta__button, .portfolio__project a {
+  .cta__button, .portfolio__project__links a, .games__sample a {
     display: inline-block;
     background-color: #80b2e9;
     max-width: 200px;
     width: 50%;
     border-radius: 4px; }
-    .cta__button:not(:last-child), .portfolio__project a:not(:last-child) {
+    .cta__button:not(:last-child), .portfolio__project__links a:not(:last-child), .games__sample a:not(:last-child) {
       margin-right: 40px;
       margin-bottom: 20px; }
-    .cta__button:hover, .portfolio__project a:hover {
+    .cta__button:hover, .portfolio__project__links a:hover, .games__sample a:hover {
       background-color: #6aa4e6; }
 
 @media all and (max-width: 545px) {
@@ -321,7 +327,7 @@ body#portfolio {
 .portfolio {
   opacity: 0;
   transition: opacity 1s ease, transform 1s ease;
-  width: 92%;
+  width: 85%;
   color: white;
   max-width: 1000px;
   margin: 150px auto 30px;
@@ -337,17 +343,25 @@ body#portfolio {
     .portfolio__project li {
       line-height: 25px; }
     .portfolio__project a {
-      padding: 5px 10px;
       color: white;
-      text-align: center;
-      text-decoration: none;
-      max-width: 100px; }
+      border-bottom: 1px solid #09f7e5;
+      text-decoration: none; }
+      .portfolio__project a:hover {
+        border-color: #06c7b8; }
+    .portfolio__project #smyte-link {
+      float: right; }
   .portfolio__project__links {
     max-width: 300px;
     width: 70%;
     display: inline-block;
     float: right;
     margin-top: 35px; }
+    .portfolio__project__links a {
+      padding: 5px 10px;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      max-width: 100px; }
   .portfolio img {
     width: 100%;
     max-width: 764px;
@@ -371,13 +385,18 @@ body#portfolio {
     margin: 10px auto;
     font-size: 13px;
     width: 30%;
-    padding: 5px 0px; }
+    padding: 5px 0px;
+    color: white;
+    text-decoration: none; }
 
 .slick-arrows-wrapper {
   position: relative;
+  max-width: 1050px;
+  margin: 0 auto;
+  width: 100%;
   top: -50vh; }
 .slick-slide {
-  margin: 0 40px; }
+  margin: 0 30px !important; }
 .slick-dots {
   position: static !important; }
 .slick-next, .slick-prev {
@@ -385,20 +404,16 @@ body#portfolio {
   position: absolute;
   width: 50px;
   height: 50px;
-  cursor: pointer; }
-  .slick-next__arrow, .slick-prev__arrow {
-    border-left: 1px solid black;
-    border-bottom: 1px solid black;
-    height: 15px;
-    width: 15px; }
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.3em; }
 .slick-next {
   right: 10px; }
-  .slick-next__arrow {
-    transform: translate(100%, 100%) rotate(-135deg); }
 .slick-prev {
   left: 10px; }
-  .slick-prev__arrow {
-    transform: translate(100%, 100%) rotate(45deg); }
 .slick-dots {
   margin-top: 25px; }
   .slick-dots li {
@@ -445,9 +460,11 @@ body#portfolio {
     display: block;
     margin: 20px auto;
     width: 95%; }
+  .portfolio #smyte-link {
+    float: none; }
 
   .slick-slide {
-    margin: 0; }
+    margin: 0 4px !important; }
 
   .games__sample {
     width: 100%;
@@ -469,8 +486,5 @@ body#portfolio {
 @media all and (max-width: 425px) {
   .slick-next, .slick-prev {
     display: none !important; } }
-@media all and (max-width: 425px) {
-  .scroll-invitation {
-    display: none; } }
 
 /*# sourceMappingURL=styles.css.map */

@@ -36,7 +36,7 @@ for( var i = 0; i < numTweens; i++) {
     x = Math.random() * space.size.x / 2;
     x *= Math.floor(Math.random()*2) == 1 ? 1 : -1; // 50% chance of negative val
     y = Math.random() * space.size.y;    
-    mouseTweenVals.push({x, y});
+    mouseTweenVals.push({x: x, y: y});
 }
 TweenMax.to("#mouse", time, {
     bezier: {
@@ -120,7 +120,7 @@ space.add({
     var mouseX = mouse.x; 
     var mouseY = mouse.y;
     var vector, difSum;
-    for( v in Vectors) {
+    for( var v in Vectors) {
         vector = Vectors[v];
         difSum = (Math.abs(vector.x - mouseX) + Math.abs(vector.y - mouseY));
         difSums[v] = difSum;
