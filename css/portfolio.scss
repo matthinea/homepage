@@ -169,7 +169,7 @@ body#portfolio {
     -moz-osx-font-smoothing: grayscale;
 }
 
-@include resp_maxw(545px) {
+@include resp_maxw(885px) {
   .portfolio {
     h4, h3 {
       margin: 0 auto;
@@ -185,10 +185,6 @@ body#portfolio {
         &:not(:last-child) {
           margin-right: 13%;
         }
-        &:last-child {
-          float: right;
-        }
-
       }
     }
     &__project__links {
@@ -205,15 +201,29 @@ body#portfolio {
     margin: 0 4px !important;
   }
 
+  .games h4 {
+    margin-bottom: 10px;
+  }
   .games__sample {
     width: 100%;
     max-height: 31%;
     overflow: hidden;
+
+    &-wrapper {
+      display: flex;
+      justify-content: center;
+      div {
+        width: 40%;
+      }
+    }
     &__links {
-      width: 40%;
-      margin-left: 10%;
+      margin-right: 2em;
+      max-width: 200px;
+      width: 25% !important;
       float: left;
-      display: inline-block;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
     a:not(:last-child), a:last-child {
       display: block;
@@ -221,16 +231,12 @@ body#portfolio {
       width: 100%;
       margin-right: 0;
     }
-    img {
-      width: 40%;
-      float: right;
-    }
   }
 }
 
 
 
-@include resp_maxw(425px) {
+@include resp_maxw(628px) {
   .slick-next, .slick-prev {
     display: none !important;
   }
